@@ -1,0 +1,18 @@
+HTTP → Protocol used for communicating between client & server
+REST API → Uses HTTP methods to perform operations on resources
+Resource → Something we perform actions on (e.g., /users, /products)
+JSON → Data format used in API communication
+
+GET → Retrieve data
+POST → Send new data
+PUT → Update entire data
+PATCH → Update partial data
+DELETE → Remove data
+
+Status Codes:
+200 OK → Success
+201 Created → New resource created
+400 Bad Request → Client sent wrong data
+401 Unauthorized → No login authentications
+404 Not Found → Resource doesn’t exist
+500 Server error → Something broke in backend
