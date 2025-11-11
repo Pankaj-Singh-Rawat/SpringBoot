@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JSON Example</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        let companies = `[
+            {
+                "name": "Big Corporation",
+                "nuberOfEmployee": 10000,
+                "ceo": "Hizbul",
+                "rating": 3.9
+            },
+            {
+                "name": "Small Corporation",
+                "nuberOfEmployee": 3,
+                "ceo": null,
+                "rating": 4.5
+            }
+        ]`
+
+    console.log(JSON.parse(companies))
+    // parse: converts the array into Strings inside log
+
+    console.log(JSON.parse(companies)[1])
+    // previews the object at first index in array.
+
+    console.log(JSON.parse(companies)[1].name)
+    // previews the name of object at first index in array
+    
+    </script>
+<!-- insepect -> Console -> you'll find the log printed there of this json file. -->
+</body>
+
+</html>
