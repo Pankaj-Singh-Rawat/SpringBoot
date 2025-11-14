@@ -1,0 +1,10 @@
+#configures -> port, db config, environment, logging, etc.
+spring:
+  profiles:
+    active: prod
+
+app:
+  info:
+    name: Day4
+    owner: DevPankaj
+    version: 1.1
