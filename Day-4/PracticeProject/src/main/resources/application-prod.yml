@@ -1,0 +1,6 @@
+server:
+  port: 8080
+
+app:
+  info:
+    message: I'm from Prod level.

@@ -1,0 +1,10 @@
+spring:
+  profiles:
+    active: prod
+#      dev/prod
+
+app:
+  info:
+    name: Environment Aware
+    owner: Pankaj Singh Rawat
+    version: 1.0
