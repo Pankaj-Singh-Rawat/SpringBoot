@@ -1,6 +1,7 @@
 package com.example.Day5.StudentService;
 
 import com.example.Day5.entity.Student;
+import com.example.Day5.exception.StudentNotFoundException;
 import com.example.Day5.repository.StudentRepository;
 import org.springframework.stereotype.Service;
 
@@ -24,7 +25,7 @@ public class StudentService {
     }
 
     public Student getStudentById(Long id){
-        return repo.findById(id).orElse(null);
+        return repo.findById(id).orElseThrow(() -> new StudentNotFoundException(id));
     }
 
     public Student updateStudent(Long id, Student updatedData){
@@ -34,15 +35,13 @@ public class StudentService {
                     student.setAge(updatedData.getAge());
                     student.setEmail(updatedData.getEmail());
                     return repo.save(student);
-                }).orElse(null);
+                }).orElseThrow(() -> new StudentNotFoundException(id));
     }
 
-    public boolean deleteStudent(Long id){
-        if(repo.existsById(id)){
-            repo.deleteById(id);
-            return true;
+    public void deleteStudent(Long id){
+        if(!repo.existsById(id)){
+            throw new StudentNotFoundException(id);
         }
-        return false;
+        repo.deleteById(id);
     }
-
 }
