@@ -1,6 +1,6 @@
 package com.example.Day5.controller;
 
-import com.example.Day5.SrudentService.StudentService;
+import com.example.Day5.StudentService.StudentService;
 import com.example.Day5.entity.Student;
 import org.springframework.web.bind.annotation.*;
 
