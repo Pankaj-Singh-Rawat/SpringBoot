@@ -1,36 +1,28 @@
-package com.example.Day6.entity;
+package com.example.Day6.dto;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.validation.constraints.*;
 
-@Entity
-public class Student {
+public class StudentRequestDTO {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
+    @NotBlank(message = "Name cannot be Empty")
     private String name;
+
+    @NotNull(message = "Age is Required")
+    @Min(value = 5, message = "Minimum age required is 5")
+    @Max(value = 100, message = "Maximum age can be smaller then or equal to 100")
     private Integer age;
+
+    @NotBlank(message = "Email cannot be Empty")
+    @Email
     private String email;
 
-    public Student() {
+    public StudentRequestDTO() {
     }
 
-    public Student(String name, Integer age, String email) {
+    public StudentRequestDTO(String name, Integer age, String email) {
         this.name = name;
         this.age = age;
         this.email = email;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getName() {
