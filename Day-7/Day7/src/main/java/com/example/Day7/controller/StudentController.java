@@ -25,33 +25,39 @@ public class StudentController {
 
     @PostMapping
     public ResponseEntity<StudentResponseDTO> createStudent(@Valid @RequestBody StudentRequestDTO dto){
-        return ResponseEntity.status(201).body(service.addStudent(dto));
+        logger.info("POST /students -> Create student -> name {}, email {}", dto.getName(), dto.getEmail());
+        StudentResponseDTO studentDTO = service.addStudent(dto);
+        logger.info("POST /students -> student created with id {}", studentDTO.getId());
+        return ResponseEntity.status(201).body(studentDTO);
     }
 
     @GetMapping
     public List<StudentResponseDTO> getAllStudent(){
+        logger.info("Request Received -> Fetching all students");
         return service.getAllStudents();
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<StudentResponseDTO> getStudent(@PathVariable Long id){
-        logger.info("All students called called.");
-        return ResponseEntity.ok(service.getStudentById(id));
+        logger.info("GET /students/{} called", id);
+        StudentResponseDTO dto = service.getStudentById(id);
+        logger.info("Returning student with id {}", id);
+        return ResponseEntity.ok(dto);
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<StudentResponseDTO> updateStudent(@PathVariable Long id, @Valid @RequestBody StudentRequestDTO dto){
-        return ResponseEntity.ok(service.updateStudent(id, dto));
+        logger.info("PUT /students/{} -> update request recieved", id);
+        StudentResponseDTO updated = service.updateStudent(id, dto);
+        logger.info("PUT /students/{} -> Update successful ", id);
+        return ResponseEntity.ok(updated);
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteStudent(@PathVariable Long id){
+        logger.info("Delete /students/{} -> request received", id);
         service.deleteStudent(id);
+        logger.info("Delete /students/{} -> Deleted student successfully", id);
         return ResponseEntity.ok("Student Deleted Successfully");
     }
-
-
-
-
-
 }
