@@ -1,203 +1,157 @@
-# 🚀 Java Mastery: Data Structures, Algorithms & Core Concepts
+# 🍃 Spring Boot Intensive: From Zero to API Pro
 
-Welcome to my Java repository!  
-This project is a **comprehensive collection of implementations** for fundamental **Data Structures, Algorithms, and Core Java concepts** such as **Multithreading and Serialization**.
+This repository is a **day-by-day learning log** documenting my journey of mastering the **Spring Boot Framework** — starting from core HTTP concepts and evolving into **production-ready backend APIs**.
 
-It serves as both:
-- 📘 A structured **learning resource**
-- 🎯 A solid **reference for technical interview preparation**
+It covers everything from:
+- Basic HTTP & JSON
+- Layered architecture
+- Dependency Injection
+- JPA & persistence
+- DTO patterns
+- Validation, logging, and global exception handling
 
----
-
-## 🔍 Overview
-
-This repository covers a wide spectrum of computer science topics, ranging from **basic sorting algorithms** to **advanced tree structures**, **graph traversals**, and **core Java internals**.
-
-The codebase is designed to be:
-- Modular
-- Easy to navigate
-- Concept-first
-- Interview-oriented
+This repo acts as both a **learning reference** and a **backend development roadmap**.
 
 ---
 
-## 📁 Project Structure
+## 🚀 Overview
+
+The goal of this repository is to build a **strong backend foundation** using Spring Boot by learning and implementing concepts **incrementally**, day by day, just like in real-world backend projects.
+
+Each folder represents a **self-contained milestone** in the learning process.
+
+---
+
+## 📂 Project Roadmap & Structure
 
 ```text
 .
-├── 🌳 Tree            # BST, AVL, Segment Trees, and Traversals
-├── 🕸️ Graph           # Adjacency Lists/Matrices, BFS, DFS, Topological Sort
-├── 🔢 Sorting         # Heap, Merge, Quick, Bubble, Insertion, Selection
-├── 🔍 SearchingAlgo   # Binary and Sequential Search
-├── 🥞 Stacks & Queues # Basic implementations and interview problems
-├── 🔗 LinkedList      # Singly, Doubly, and Circular Linked Lists
-├── 📉 Heap            # Min-Heap, Max-Heap, and Heapify logic
-├── 🧵 MultiThreading  # Thread lifecycle and Runnable implementations
-├── 💾 Serialisation   # Object Persistence (Serialization/Deserialization)
-├── 🧩 strings         # Sliding Window, Two Pointers, Kadane’s Algorithm
-├── 🔄 Recursion       # Backtracking and recursive patterns
-└── 💡 LeetCode        # Competitive programming & interview-style problems
+├── 📂 Day-1                 # HTTP Fundamentals, JSON & API Basics
+├── 📂 Day-2                 # First Web App & Layered Architecture
+├── 📂 Day-3                 # Dependency Injection & Component Scanning
+├── 📂 Day-4                 # Configuration: Profiles, YAML vs Properties
+├── 📂 Day-5                 # JPA Persistence, Repositories & Exception Handling
+├── 📂 Day-6                 # DTO Pattern & Data Validation
+├── 📂 Day-7                 # Logging & Professional API Error Handling
+└── 📂 Day-7-ReviewPhase     # Final review & project consolidation
 ```
-## 🛠️ Detailed Module Breakdown
-### 1️⃣ Data Structures
 
-Trees
+## 🚀 Daily Breakdown
+### 🔹 Day 1: Web Fundamentals
 
-Binary Search Tree (BST)
+### Understanding how the web works:
+ - HTTP methods (GET, POST, PUT, DELETE)
+ - Client–Server architecture
+ - JSON structure & formatting
+ - Basic API concepts
 
-AVL Tree (Self-balancing)
+### 🔹 Day 2 & Day 3: Layered Architecture & Dependency Injection
 
-Segment Trees for range queries
+#### Moving from monolithic code to clean architecture:
+ - Controller layer (handling HTTP requests)
+ - Service layer (business logic)
+ - Model / Entity layer (data representation)
+ - Dependency Injection (DI)
+ - Inversion of Control (IoC)
+ - Component Scanning
 
-Tree traversals and problems
+### 🔹 Day 4: Externalized Configuration
 
-Graphs
+#### Managing real-world environments:
+ - Application profiles (dev / prod)
+ - application.yml vs application.properties
+ - Using @Configuration and @Bean
+ - Environment-based configuration switching
 
-Adjacency List & Adjacency Matrix
+### 🔹 Day 5: Data Persistence & Exception Handling
 
-BFS and DFS (connected & disconnected graphs)
+#### Connecting APIs to databases:
+ - Spring Data JPA
+ - Entity & Repository design
+ - CRUD operations
 
-Topological Sorting (DFS-based & Kahn’s Algorithm)
+#### Centralized exception handling using:
+ - @ControllerAdvice
+ - @ExceptionHandler
 
-Heaps
+### 🔹 Day 6: DTO Pattern & Validation
 
-Min Heap and Max Heap
+#### Decoupling the database layer from the API:
+ - Request & Response DTOs
+ - Data validation before reaching service logic
+ - Cleaner, safer, and more maintainable APIs
 
-Priority Queue concepts
+### 🔹 Day 7: Production-Ready Features
 
-Heapify logic
+#### Finalizing backend best practices:
+ - Logging using SLF4J & Logback
+ - Writing logs to app.log
+ - Global API error responses
+ - Custom ApiError structure
+ - Cleaner and standardized error handling
 
-Linked Lists
+## 🛠️ Tech Stack
 
-Singly Linked List
-
-Doubly Linked List
-
-Circular Linked List
-
-### 2️⃣ Algorithms
-
-Sorting
-
-Comparison of O(n²) and O(n log n) algorithms
-
-Bubble, Selection, Insertion, Merge, Quick, and Heap Sort
-
-Searching
-
-Linear (Sequential) Search
-
-Binary Search
-
-String & Array Patterns
-
-Sliding Window
-
-Two Pointers
-
-Kadane’s Algorithm
-
-HashMap-based techniques
-
-### 3️⃣ Core Java & Advanced Concepts
-
-Multithreading
-
-Thread lifecycle
-
-Thread class
-
-Runnable interface
-
-Concurrent execution concepts
-
-Serialization
-
-Object persistence using serialization
-
-Reading/writing objects with .ser files
-
-File Handling
-
-Reading from and writing to files
-
-Modifiers
-
-Access modifiers
-
-Understanding program execution flow
+Language: Java
+Framework: Spring Boot (Web, Data JPA)
+Build Tool: Maven (using mvnw wrapper)
+Configuration: YAML & Properties
+Logging: SLF4J + Logback
+Documentation: PDF guides included per module
 
 ## 🚦 Getting Started
-✅ Prerequisites
-
-Java JDK 11 or higher
-
-Any IDE (IntelliJ IDEA, Eclipse, VS Code) or terminal
+### ✅ Prerequisites
+ - Java JDK 17 or higher
+ - IDE: IntelliJ IDEA / VS Code / Eclipse
 
 ### ▶️ How to Run
 
-Clone the repository
+ - Each day is an independent Spring Boot project.
+ - Navigate to the desired day before running.
+
+# Example: Running Day 7 project
 
 ```text
-git clone https://github.com/your-username/your-repo-name.git
+cd Day-7/Day7
+./mvnw spring-boot:run
 ```
 
-### Navigate to a module
+## 📈 Current Status & Roadmap
 
-```text
-cd Sorting
-```
+ HTTP & JSON Fundamentals
 
-### Compile & Run
+ Spring Boot Layered Architecture
 
-```text
-javac MergeSort.java
-java MergeSort
-```
+ Dependency Injection & Beans
 
-## 📈 Learning Roadmap
+ JPA & Hibernate Integration
 
- Basic Data Structures (Arrays, Linked Lists, Stacks)
+ DTO Pattern & Validation
 
- Advanced Trees (AVL, Segment Trees)
+ Logging & Global Exception Handling
 
- Graph Theory (DFS, BFS, Topological Sort)
+ Spring Security & JWT (Upcoming)
 
- Multithreading Fundamentals
-
- System Design (Coming Soon)
+ Unit & Integration Testing (Upcoming)
 
 ## 🤝 Contributing
 
-Contributions are welcome!
-You can:
-
-Fork the repository
-
-Improve existing implementations
-
-Add optimized or alternative approaches
-
-Submit a Pull Request
+This is primarily a personal learning repository, but contributions are welcome!
+If you:
+Find a bug
+See an optimization opportunity
+Want to improve service-layer logic
+Feel free to open a Pull Request 🚀
 
 ## 👤 Author
 
 Pankaj Singh Rawat
-
-## 📝 Repository Tips & Best Practices
-
-Avoid committing .class and .ser files
-Add the following to your .gitignore:
-
-```text
-*.class
-*.ser
-```
-
-Use proper package declarations
-If this grows into a large-scale project, package structure will greatly improve maintainability.
+Learning Path: Java Backend Development
+Created to document progress and master the Spring ecosystem.
 
 ## 📜 License
 
-This project is intended for educational purposes only.
+This project is intended for educational purposes.
 You are free to use, modify, and learn from this repository.
+
+⭐ If this repo helps you, consider starring it!
