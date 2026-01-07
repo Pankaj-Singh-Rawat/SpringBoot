@@ -118,21 +118,14 @@ cd Day-7/Day7
 
 ## 📈 Current Status & Roadmap
 
- HTTP & JSON Fundamentals
-
- Spring Boot Layered Architecture
-
- Dependency Injection & Beans
-
- JPA & Hibernate Integration
-
- DTO Pattern & Validation
-
- Logging & Global Exception Handling
-
- Spring Security & JWT (Upcoming)
-
- Unit & Integration Testing (Upcoming)
+  - HTTP & JSON Fundamentals
+  - Spring Boot Layered Architecture
+  - Dependency Injection & Beans
+  - JPA & Hibernate Integration
+  - DTO Pattern & Validation
+  - Logging & Global Exception Handling
+  - Spring Security & JWT (Upcoming)
+  - Unit & Integration Testing (Upcoming)
 
 ## 🤝 Contributing
 
